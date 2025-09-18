@@ -1,7 +1,22 @@
 section{
     display: grid;
+    font-weight: bold;
+    font-size: 40px;
 }
 button{
-    width: 100px; 
-    height: 100px;
+    width: 150px; 
+    height: 50px;
+    font-size: 35px;
+}
+
+#kulometerID{
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+}
+
+
+#app2ID{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
 }
