@@ -32,7 +32,7 @@ function noOption(rand) {
 function greetBuddy(chosenGreeting) {
     app2.innerHTML="";
     let kompisNumber = Math.floor(Math.random() * 3) + 1;
-    if (chosenGreeting === kompisNumber) {
+    if (chosenGreeting === kompisNumber && kulness >= 50) {
         kulness = kulness + 10;
         
         let htmlString = `
@@ -42,8 +42,17 @@ function greetBuddy(chosenGreeting) {
 
         drawKulOMeter();
     }
+    else if (chosenGreeting === kompisNumber && kulness < 50) {
+        kulness = kulness - 5;
+        
+        let htmlString = `
+        <div style="font-size: 36px;">You're not cool</div>
+        `
+        app2.innerHTML = htmlString;
 
-    else if(chosenGreeting !== kompisNumber){
+        drawKulOMeter();
+    }
+    else{
         kulness = kulness - 10;
         
         let htmlString = `
